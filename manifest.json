@@ -3,6 +3,12 @@
   "version": "1.0",
   "description": "This extension is a improved search bar for Instagram.",
   "author": "Danilo Macedo Bakun",
+  "icons": {
+    "16": "./images/logos/logo-16.png",
+    "32": "./images/logos/logo-32.png",
+    "48": "./images/logos/logo-48.png",
+    "128": "./images/logos/logo-128.png"
+  },
   "action": {
     "default_popup": "popup.html"
   },
