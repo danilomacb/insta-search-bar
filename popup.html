@@ -2,15 +2,23 @@
 <html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <input type="text" id="searchBar" placeholder="Search" autofocus />
+
+    <div id="checkboxes">
+      <input type="checkbox" name="showUsers" id="showUsers" checked />
+      <label for="showUsers">Users</label>
+
+      <input type="checkbox" name="showHashtags" id="showHashtags" checked />
+      <label for="showHashtags">Hashtags</label>
+
+      <input type="checkbox" name="showPlaces" id="showPlaces" checked />
+      <label for="showPlaces">Places</label>
+    </div>
 
     <div id="contents"></div>
 

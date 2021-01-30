@@ -1,7 +1,10 @@
-const searchBarInput = document.getElementById("searchBar");
+const searchBar = document.getElementById("searchBar");
+const showUsers = document.getElementById("showUsers");
+const showHashtags = document.getElementById("showHashtags");
+const showPlaces = document.getElementById("showPlaces");
 const contents = document.getElementById("contents");
 
-searchBarInput.addEventListener("keyup", handleSubmit);
+searchBar.addEventListener("keyup", handleSubmit);
 
 async function handleSubmit(e) {
   if (e.key === "Enter") {
@@ -19,7 +22,7 @@ async function handleSubmit(e) {
 
     let contentDisplayed = "";
 
-    if (jsonRes.users) {
+    if (jsonRes.users && showUsers.checked) {
       jsonRes.users.map(
         (user) =>
           (contentDisplayed += `
@@ -37,7 +40,7 @@ async function handleSubmit(e) {
       );
     }
 
-    if (jsonRes.hashtags) {
+    if (jsonRes.hashtags && showHashtags.checked) {
       jsonRes.hashtags.map(
         (hashtag) =>
           (contentDisplayed += `
@@ -50,7 +53,7 @@ async function handleSubmit(e) {
       );
     }
 
-    if (jsonRes.places) {
+    if (jsonRes.places && showPlaces.checked) {
       jsonRes.places.map((place) => {
         contentDisplayed += `
           <a href="https://www.instagram.com/explore/locations/${place.place.location.pk}/${place.place.slug}" class="content" target="_blank"">

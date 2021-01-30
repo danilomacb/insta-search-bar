@@ -30,6 +30,18 @@ img {
   font-size: 12pt;
 }
 
+#checkboxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#checkboxes label {
+  margin-right: 10px;
+  margin-left: 3px;
+}
+
 #contents {
   display: flex;
   flex-direction: column;
@@ -43,6 +55,10 @@ img {
   padding: 10px;
   width: 80%;
   border-radius: 5px;
+}
+
+.content:first-child {
+  margin-top: 0;
 }
 
 .contentTitle {
