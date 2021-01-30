@@ -1,3 +1,11 @@
+# Logo
+
+![Logo](./images/logos/logo-128.png)
+
+# Demonstration
+
+![Logo](./demo.gif)
+
 # How to install
 
 1. Download the extension zip folder, by click on code button.
