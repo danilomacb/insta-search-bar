@@ -3,6 +3,7 @@
   --black2: #404040;
   --black3: #606060;
   --white1: #ccc;
+  --white2: #aaa;
 }
 
 * {
@@ -70,6 +71,10 @@ nav {
   margin-top: 80px;
 }
 
+.content:last-child {
+  margin-bottom: 50px;
+}
+
 .contentTitle {
   font-weight: bold;
   font-size: 14pt;
@@ -85,4 +90,26 @@ nav {
 .verified {
   max-width: 20px;
   margin-left: 5px;
+}
+
+#up {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background-color: var(--white2);
+  opacity: 0.6;
+  margin: 10px;
+  padding: 5px 6px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+#up img {
+  height: 20px;
+}
+
+#up:hover {
+  cursor: pointer;
 }

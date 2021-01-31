@@ -3,6 +3,7 @@ const showUsers = document.getElementById("showUsers");
 const showHashtags = document.getElementById("showHashtags");
 const showPlaces = document.getElementById("showPlaces");
 const contents = document.getElementById("contents");
+const up = document.getElementById("up");
 
 searchBar.addEventListener("keyup", handleSubmit);
 
@@ -65,5 +66,13 @@ async function handleSubmit(e) {
     }
 
     contents.innerHTML = contentDisplayed;
+
+    if (contents.innerHTML) {
+      up.style.display = "block";
+    } else {
+      up.style.display = "none";
+    }
   }
 }
+
+up.addEventListener("click", () => window.scrollTo(0, 0));
