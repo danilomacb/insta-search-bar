@@ -75,4 +75,10 @@ async function handleSubmit(e) {
   }
 }
 
-up.addEventListener("click", () => window.scrollTo(0, 0));
+up.addEventListener("click", () =>
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  })
+);
