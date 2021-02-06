@@ -9,6 +9,12 @@ searchBar.addEventListener("keyup", handleSubmit);
 
 async function handleSubmit(e) {
   if (e.key === "Enter") {
+    if (!e.target.value) {
+      up.style.display = "none";
+      contents.innerHTML = "";
+      return;
+    }
+
     let res;
     try {
       res = await fetch(
