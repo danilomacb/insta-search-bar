@@ -21,6 +21,11 @@ async function handleSubmit(e) {
 
     const jsonRes = await res.json();
 
+    if (jsonRes.users.length === 0 && jsonRes.hashtags.length === 0 && jsonRes.places.length === 0) {
+      contents.innerHTML = `<div id="empty">no results found.</div>`;
+      return;
+    }
+
     let contentDisplayed = "";
 
     if (jsonRes.users && showUsers.checked) {
